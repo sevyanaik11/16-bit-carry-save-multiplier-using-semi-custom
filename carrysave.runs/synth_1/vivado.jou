@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Oct 30 13:00:01 2025
+# Process ID: 6848
+# Current directory: F:/123ec0027/carrysave/carrysave.runs/synth_1
+# Command line: vivado.exe -log carry_save_multiplier_4bit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source carry_save_multiplier_4bit.tcl
+# Log file: F:/123ec0027/carrysave/carrysave.runs/synth_1/carry_save_multiplier_4bit.vds
+# Journal file: F:/123ec0027/carrysave/carrysave.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source carry_save_multiplier_4bit.tcl -notrace

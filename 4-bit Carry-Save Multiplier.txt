@@ -1,0 +1,35 @@
+// 4-bit Carry-Save Multiplier
+module carry_save_multiplier_4bit (
+    input  [3:0] A,
+    input  [3:0] B,
+    output [7:0] P
+);
+    wire [3:0] pp0, pp1, pp2, pp3;
+    wire [7:0] s1, s2, s3, c1, c2, c3;
+
+    // Partial Products
+    assign pp0 = A & {4{B[0]}};
+    assign pp1 = A & {4{B[1]}};
+    assign pp2 = A & {4{B[2]}};
+    assign pp3 = A & {4{B[3]}};
+
+    // Align partial products
+    assign s1 = {4'b0, pp0};
+    assign s2 = {3'b0, pp1, 1'b0};
+    assign s3 = {2'b0, pp2, 2'b0};
+    wire [7:0] pp4 = {1'b0, pp3, 3'b0};
+
+    // Stage 1: Carry-Save Additions
+    wire [7:0] sum1, carry1;
+    assign {carry1, sum1} = s1 + s2;
+
+    wire [7:0] sum2, carry2;
+    assign {carry2, sum2} = sum1 + s3;
+
+    wire [7:0] sum3, carry3;
+    assign {carry3, sum3} = sum2 + pp4;
+
+    // Final addition (carry propagate)
+    assign P = sum3 + carry3;
+
+endmodule

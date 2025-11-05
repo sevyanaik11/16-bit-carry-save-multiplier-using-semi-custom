@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_carry_save_multiplier_4bit_behav/xsimk.exe -simmode gui -wdb tb_carry_save_multiplier_4bit_behav.wdb -simrunnum 0 -socket 51851
+Design successfully loaded
+Design Loading Memory Usage: 6820 KB (Peak: 6820 KB)
+Design Loading CPU Usage: 0 ms
